@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css"  />
+    <title>Accueil</title>
+  </head>
+
+  <body>
+
+
+
+    <div class="gradiant-app"></div>
+    <!-- _________________________________________________________________________________________ -->
+    <!-- Header Back -->
+
+
+
+
+
+
+
+
+    <header>
+      <a href="index.html">
+      <div class="Back-container">
+      <div class="icon-container-Header-Back">
+        <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.4474 2.99984L3.0001 11.5522L11.5525 19.9995" class="Str-Nr-Blc" stroke-width="4.25002" stroke-linecap="round"/>
+        </svg> 
+      </div>
+      <p class="petit-text Text-Grsc">Retour</p>
+      </div>
+      </a>
+    </header>
+
+
+
+
+     <!-- _________________________________________________________________________________________ -->
+    <!-- Header DETAIL DE LA RESERVATION -->
+
+
+
+
+
+    <section>
+      <div class="INFOS_NAV">
+        <h1 class="Text-Nr-Blc">Nouvelle réservation</h1>
+      </div>
+    </section>
+
+
+
+
+
+
+
+<!-- _________________________________________________________________________________________ -->
+    <!-- Separateur -->
+
+
+
+
+
+    <section>
+      <div class="separateur-container">
+      <div class="separateur Div-Rs"></div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+<!-- _________________________________________________________________________________________ -->
+    <!-- sherch-zonne -->
+
+
+
+
+
+<section>
+      <div class="form-zonne">
+        <div class="calendar-container">
+            <div class="calendar-header" id="calendarHeader">
+                <button id="prevDay" class="nav-button">
+                    <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.65686 2.00001L3.00001 7.65687L8.65686 13.3137" class="Str-Blc" stroke-width="3.95373" stroke-linecap="round"/>
+                        </svg>
+                </button>
+                <div class="current-date">
+                    <span id="dayName"></span>, <span id="monthName"></span> <span id="day"></span>, <span id="year"></span>
+                </div>
+                <button id="nextDay" class="nav-button">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.65686 13.3137L8.31371 7.65685L2.65686 2" class="Str-Blc" stroke-width="3.95373" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+            </div>
+            <div class="calendar-body" id="calendarBody">
+                <div class="calendar-days">
+                    <!-- Les noms des jours -->
+                    <div class="day-name">Dim</div>
+                    <div class="day-name">Lun</div>
+                    <div class="day-name">Mar</div>
+                    <div class="day-name">Mer</div>
+                    <div class="day-name">Jeu</div>
+                    <div class="day-name">Ven</div>
+                    <div class="day-name">Sam</div>
+                </div>
+                <div class="calendar-dates" id="calendarDates"></div>
+            </div>
+            <div class="calendar-footer" id="calendarFooter">
+                <button id="confirmButton" class="confirm-button">OK</button>
+            </div>
+        <script src="/js/calendar.js"></script>
+</section>
+
+<section>
+
+
+    <div class="nv-rs-slcteur-heures mtt">
+        <div class="nv-rs-h-zonne">
+            <div class="nv-rs-h">
+                <div class="btn-h-footer gros-text">Midi</div>
+                <div class="btn-h gros-text">12:00</div>
+                <div class="btn-h gros-text">12:30</div>
+                <div class="btn-h gros-text">13:00</div>
+                <div class="btn-h gros-text">13:30</div>
+            </div>
+            <div class="sep-verticical"></div>
+            <div class="nv-rs-h">
+                <div class="btn-h-footer gros-text">Soir</div>
+                <div class="btn-h gros-text">19:00</div>
+                <div class="btn-h gros-text">19:30</div>
+                <div class="btn-h gros-text">20:00</div>
+                <div class="btn-h gros-text">20:30</div>
+            </div>
+        </div> 
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.btn-h, .btn-h-footer').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            if (btn.classList.contains('btn-h-footer')) {
+                // Si le bouton "Tout" est déjà sélectionné, on désélectionne tout
+                const parentSection = btn.closest('.nv-rs-h');
+                if (btn.classList.contains('selected')) {
+                    parentSection.querySelectorAll('.btn-h, .btn-h-footer').forEach(function (hourBtn) {
+                        hourBtn.classList.remove('selected');
+                    });
+                } else {
+                    // Sinon, on sélectionne tout
+                    parentSection.querySelectorAll('.btn-h, .btn-h-footer').forEach(function (hourBtn) {
+                        hourBtn.classList.add('selected');
+                    });
+                }
+            } else {
+                const parentSection = btn.closest('.nv-rs-h');
+                
+                // Si le bouton est déjà sélectionné, on le désélectionne
+                if (btn.classList.contains('selected')) {
+                    btn.classList.remove('selected');
+                } else {
+                    // Sinon, désélectionner tous les autres boutons horaires
+                    parentSection.querySelectorAll('.btn-h').forEach(function (hourBtn) {
+                        hourBtn.classList.remove('selected');
+                    });
+                    // Sélectionner uniquement le bouton cliqué
+                    btn.classList.add('selected');
+
+                    // Désélectionner le bouton "Tout" associé
+                    parentSection.querySelector('.btn-h-footer').classList.remove('selected');
+                }
+            }
+        });
+    });
+});
+
+
+
+
+    </script>
+
+
+</section>
+    
+
+<section>
+    <h2 class="Text-Nr-Blc mlq mtt">Nombre de personnes</h2>
+</section>
+    
+
+<section>
+    <div class="nv-nb-pers-container mtt mbt">
+        
+        <div class="nv-nb-pers-btn gros-text">1</div>
+        <div class="nv-nb-pers-btn gros-text">2</div>
+        <div class="nv-nb-pers-btn gros-text">3</div>
+        <div class="nv-nb-pers-btn gros-text">4</div>
+        <div class="nv-nb-pers-btn gros-text">5</div>
+        <div class="nv-nb-pers-btn gros-text">6</div>
+        <div class="nv-nb-pers-btn gros-text">7</div>
+        <div class="nv-nb-pers-btn gros-text">8</div>
+        <div class="nv-nb-pers-btn gros-text">9</div>
+        <div class="nv-nb-pers-btn gros-text">+</div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.nv-nb-pers-container');
+    const buttons = document.querySelectorAll('.nv-nb-pers-btn');
+    const containerWidth = container.clientWidth;
+    const buttonWidth = buttons[0].clientWidth;
+    const totalButtons = buttons.length;
+
+    // Calculate the number of buttons that can fit in one row
+    const buttonsPerRow = Math.floor((containerWidth + 5) / (buttonWidth + 5));
+    const totalGapSpace = containerWidth - (buttonsPerRow * buttonWidth);
+    const gap = totalGapSpace / (buttonsPerRow - 1);
+
+    // Apply the calculated gap
+    container.style.gap = `${gap}px`;
+
+    // Event listener for button selection
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            // Toggle selection of the clicked button
+            if (btn.classList.contains('selected')) {
+                btn.classList.remove('selected');
+            } else {
+                // Deselect all other buttons
+                buttons.forEach(function (otherBtn) {
+                    otherBtn.classList.remove('selected');
+                });
+                // Select the clicked button
+                btn.classList.add('selected');
+            }
+        });
+    });
+});
+
+    </script>
+</section>
+
+
+<section>
+    <h2 class="Text-Nr-Blc mlq mtt">Information client</h2>
+</section>
+
+
+
+<section>
+<div class="form-zonne mtt">
+    <div class="form">
+        <div class="form-icon"> 
+            <svg  width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7 8C9.20914 8 11 6.20914 11 4C11 1.79086 9.20914 0 7 0C4.79086 0 3 1.79086 3 4C3 6.20914 4.79086 8 7 8ZM7 9C3.13401 9 0 12.134 0 16C0 18.2091 1.79086 20 4 20H10C12.2091 20 14 18.2091 14 16C14 12.134 10.866 9 7 9Z"
+                    class="Fill-Nr-Blc" />
+            </svg>
+        </div>
+        <input type="text" placeholder="Nom..." class="gros-text Text-Nr-Blc"> 
+      </div>
+</div>
+</section>
+
+
+
+
+<section>
+    <div class="form-zonne mtq">
+        <div class="form">
+            <div class="form-split">
+                <div class="form-icon">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M-5.14984e-05 3.64438C-5.14984e-05 8.10105 5.90912 14.0044 10.36 14.0044C11.3341 14.0044 12.2441 13.6369 12.915 12.966L13.4983 12.2952C14.175 11.6185 14.175 10.4752 13.4691 9.76938C13.4567 9.757 12.7501 9.21374 12.3373 8.8966C12.1429 8.74721 11.9633 8.57739 11.7552 8.44771C11.0669 8.01888 10.1533 8.09388 9.54912 8.67271C9.02461 9.09303 8.30163 9.20708 7.72385 8.86366C6.65558 8.22869 5.80408 7.36927 5.15102 6.26858C4.80971 5.69333 4.91552 4.97309 5.33162 4.44938C5.98049 3.77793 6.00173 2.71898 5.39533 2.02217C5.35409 1.97478 5.31091 1.9301 5.26849 1.88377C5.00617 1.5973 4.01518 0.515191 4 0.50001C3.55959 0.0596366 2.38578 -0.176453 1.67995 0.529381L1.06745 1.06021C0.367449 1.75438 -5.14984e-05 2.66438 -5.14984e-05 3.63855V3.64438Z"
+                            class="Fill-Nr-Blc" />
+                    </svg>
+                </div>
+                <p class="Text-Grsc">+33</p>
+                <input type="tel" placeholder="" id="telephone" class="gros-text Text-Nr-Blc">
+            </div>
+            <div class="form-split mrq">
+                <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <g clip-path="url(#clip0_309_222)" >
+                        <rect width="8" height="18" fill="#392CEB"/>
+                        <rect x="15.9999" width="8" height="18" fill="#E06E6E" />
+                        <rect x="7.99988" width="8" height="18" fill="#F8F8F8" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_309_222">
+                            <rect width="23.814" height="18" rx="6" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const telInput = document.getElementById('telephone');
+    const countrySelectBtn = document.getElementById('country-select-btn');
+    const countryDropdown = document.getElementById('country-dropdown');
+    const countryCode = document.getElementById('country-code');
+    const countryIcon = document.getElementById('country-icon');
+
+    // Format telephone number input
+    telInput.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+        if (value.length > 10) {
+            value = value.slice(0, 10); // Limit to 10 digits
+        }
+
+        // Add spaces after every 2 digits
+        let formattedValue = '';
+        for (let i = 0; i < value.length; i += 2) {
+            if (i > 0) {
+                formattedValue += ' ';
+            }
+            formattedValue += value.slice(i, i + 2);
+        }
+
+        e.target.value = formattedValue;
+    });
+
+    // Show dropdown when clicking the flag button
+    countrySelectBtn.addEventListener('click', function () {
+        countryDropdown.style.display = countryDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Handle country selection
+    document.querySelectorAll('.country-option').forEach(function (option) {
+        option.addEventListener('click', function () {
+            const selectedCode = option.getAttribute('data-code');
+            const selectedFlag = option.getAttribute('data-flag');
+
+            // Update country code and flag
+            countryCode.textContent = selectedCode;
+            countrySelectBtn.textContent = selectedFlag;
+
+            // Hide dropdown
+            countryDropdown.style.display = 'none';
+        });
+    });
+
+    // Hide dropdown if clicked outside
+    document.addEventListener('click', function (e) {
+        if (!countrySelectBtn.contains(e.target) && !countryDropdown.contains(e.target)) {
+            countryDropdown.style.display = 'none';
+        }
+    });
+});
+
+    </script>
+
+<section>
+    <div class="form-zonne mtq mbt">
+        <div class="form">
+            <div class="form-icon"> 
+                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.125109 3.00354L7 6.44098L13.8749 3.00354C13.4321 1.27652 11.8651 0 10 0H4C2.13489 0 0.56792 1.27652 0.125109 3.00354ZM14 4.05902L7.22361 7.44721L7 7.55902L6.77639 7.44721L0 4.05902V9C0 11.2091 1.79086 13 4 13H10C12.2091 13 14 11.2091 14 9V4.05902Z" class="Fill-Nr-Blc"/>
+                    </svg>
+            </div>
+            <input type="email" placeholder="E-mail..." class="gros-text Text-Nr-Blc"> 
+          </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="Text-Nr-Blc mlq mtt">Note interne</h2>
+</section>
+
+
+<section>
+    <div class="form-zonne mtq mbt">
+        <div class="form-note">
+            <div class="form-icon-note"> 
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0904177 4.15704C0.0663932 4.42117 0.148277 4.68402 0.318055 4.88778L2.49214 7.49693C2.84568 7.92123 3.47625 7.97858 3.90054 7.62504L7.29154 4.79948C7.71584 4.44594 7.77319 3.81537 7.41965 3.39108L5.24556 0.781921C5.07579 0.578168 4.83202 0.450204 4.56789 0.42618L1.45961 0.143458C0.909598 0.0934297 0.423168 0.498749 0.37314 1.04876L0.0904177 4.15704ZM4.92716 8.85677C4.50286 9.21031 4.44551 9.84087 4.79905 10.2652L8.26476 14.4244C9.39856 15.7851 11.4207 15.9691 12.7814 14.8352C14.1421 13.7014 14.3261 11.6793 13.1923 10.3186L9.72656 6.15931C9.37302 5.73502 8.74246 5.67766 8.31816 6.03121L4.92716 8.85677Z" class="Fill-Nr-Blc"/>
+                    </svg>
+            </div>
+            <textarea class="gros-text Text-Nr-Blc" placeholder="Note interne..."></textarea> 
+            
+    </div>
+</section>
+
+
+<section class="bouton-footer">
+    <div class="bounton-footer-container Div-Vlt Text-Blc-Nr Ombr">
+        <h2>Réserver</h2>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  </body>
+</html>
+    

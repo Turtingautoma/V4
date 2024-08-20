@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css"  />
+    <title>Accueil</title>
+  </head>
+
+  <body>
+
+
+
+    <div class="gradiant-app"></div>
+    <!-- _________________________________________________________________________________________ -->
+    <!-- Header Back -->
+
+
+
+
+
+
+
+
+    <header>
+      <a href="index.html">
+      <div class="Back-container">
+      <div class="icon-container-Header-Back">
+        <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.4474 2.99984L3.0001 11.5522L11.5525 19.9995" class="Str-Nr-Blc" stroke-width="4.25002" stroke-linecap="round"/>
+        </svg> 
+      </div>
+      <p class="petit-text Text-Grsc">Retour</p>
+      </div>
+      </a>
+    </header>
+
+
+
+
+     <!-- _________________________________________________________________________________________ -->
+    <!-- Header DETAIL DE LA RESERVATION -->
+
+
+
+
+
+    <section>
+      <div class="INFOS_NAV">
+        <h1 class="Text-Nr-Blc">Fermer un service</h1>
+      </div>
+    </section>
+
+
+
+
+
+
+
+<!-- _________________________________________________________________________________________ -->
+    <!-- Separateur -->
+
+
+
+
+
+    <section>
+      <div class="separateur-container">
+      <div class="separateur Div-Rs"></div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+<!-- _________________________________________________________________________________________ -->
+    <!-- sherch-zonne -->
+
+
+
+
+
+<section>
+      <div class="form-zonne">
+        <div class="calendar-container">
+            <div class="calendar-header" id="calendarHeader">
+                <button id="prevDay" class="nav-button">
+                    <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.65686 2.00001L3.00001 7.65687L8.65686 13.3137" class="Str-Blc-Nr" stroke-width="3.95373" stroke-linecap="round"/>
+                        </svg>
+                </button>
+                <div class="current-date">
+                    <span id="dayName"></span>, <span id="monthName"></span> <span id="day"></span>, <span id="year"></span>
+                </div>
+                <button id="nextDay" class="nav-button">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.65686 13.3137L8.31371 7.65685L2.65686 2" class="Str-Blc-Nr" stroke-width="3.95373" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+            </div>
+            <div class="calendar-body" id="calendarBody">
+                <div class="calendar-days">
+                    <!-- Les noms des jours -->
+                    <div class="day-name">Dim</div>
+                    <div class="day-name">Lun</div>
+                    <div class="day-name">Mar</div>
+                    <div class="day-name">Mer</div>
+                    <div class="day-name">Jeu</div>
+                    <div class="day-name">Ven</div>
+                    <div class="day-name">Sam</div>
+                </div>
+                <div class="calendar-dates" id="calendarDates"></div>
+            </div>
+            <div class="calendar-footer" id="calendarFooter">
+                <button id="confirmButton" class="confirm-button">OK</button>
+            </div>
+        <script src="/js/calendar.js"></script>
+</section>
+
+<section>
+    <div class="nv-rs-slcteur-heures mtt">
+        <div class="nv-rs-h-zonne">
+            <div class="nv-rs-h">
+                <div class="btn-h-footer gros-text">Midi</div>
+                <div class="btn-h gros-text">12:00</div>
+                <div class="btn-h gros-text">12:30</div>
+                <div class="btn-h gros-text">13:00</div>
+                <div class="btn-h gros-text">13:30</div>
+            </div>
+            <div class="sep-verticical"></div>
+            <div class="nv-rs-h">
+                <div class="btn-h-footer gros-text">Soir</div>
+                <div class="btn-h gros-text">19:00</div>
+                <div class="btn-h gros-text">19:30</div>
+                <div class="btn-h gros-text">20:00</div>
+                <div class="btn-h gros-text">20:30</div>
+            </div>
+        </div> 
+    </div>
+    
+    <!-- Bouton "Toute la journée" -->
+    <div class="btn-h-all-day gros-text mtq">
+        Toute la journée
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const allHourButtons = document.querySelectorAll('.btn-h, .btn-h-footer');
+            const allDayButton = document.querySelector('.btn-h-all-day');
+
+            // Gestion des clics sur les boutons "Midi" et "Soir"
+            allHourButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const parentSection = btn.closest('.nv-rs-h-zonne');
+
+                    if (btn.classList.contains('btn-h-footer')) {
+                        // Si le bouton "Tout" est déjà sélectionné, on désélectionne tout
+                        if (btn.classList.contains('selected')) {
+                            parentSection.querySelectorAll('.btn-h, .btn-h-footer').forEach(function (hourBtn) {
+                                hourBtn.classList.remove('selected');
+                            });
+                        } else {
+                            // Sinon, on sélectionne tout
+                            parentSection.querySelectorAll('.btn-h, .btn-h-footer').forEach(function (hourBtn) {
+                                hourBtn.classList.add('selected');
+                            });
+                        }
+                    } else {
+                        // Si le bouton est déjà sélectionné, on le désélectionne
+                        if (btn.classList.contains('selected')) {
+                            btn.classList.remove('selected');
+                        } else {
+                            // Désélectionner tous les autres boutons horaires
+                            parentSection.querySelectorAll('.btn-h').forEach(function (hourBtn) {
+                                hourBtn.classList.remove('selected');
+                            });
+                            // Sélectionner uniquement le bouton cliqué
+                            btn.classList.add('selected');
+
+                            // Désélectionner le bouton "Tout" associé
+                            parentSection.querySelector('.btn-h-footer').classList.remove('selected');
+                        }
+                    }
+                    // Désélectionner le bouton "Toute la journée"
+                    allDayButton.classList.remove('selected');
+                });
+            });
+
+            // Gestion du clic sur le bouton "Toute la journée"
+            allDayButton.addEventListener('click', function () {
+                if (allDayButton.classList.contains('selected')) {
+                    // Désélectionner tous les boutons si "Toute la journée" est déjà sélectionné
+                    allHourButtons.forEach(function (btn) {
+                        btn.classList.remove('selected');
+                    });
+                    allDayButton.classList.remove('selected');
+                } else {
+                    // Sélectionner tous les boutons horaires
+                    allHourButtons.forEach(function (btn) {
+                        btn.classList.add('selected');
+                    });
+                    allDayButton.classList.add('selected');
+                }
+            });
+        });
+    </script>
+</section>
+
+    
+
+    
+
+
+
+<section class="bouton-footer mtt">
+    <div class="bounton-footer-container Div-Rg Text-Blc">
+        <h2>Fermer</h2>
+    </div>
+</section>
+
+  </body>
+</html>
+    

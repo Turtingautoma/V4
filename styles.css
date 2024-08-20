@@ -1,0 +1,1693 @@
+/* ______________\\\\___________ FEUILLE CSS GENERAL ____________////__________________ */
+
+
+
+
+
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--Blc-Nr);
+    touch-action: manipulation;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+a, div, button, input[type="button"], input[type="submit"], .btn-h, .btn-h-footer, [onclick] {
+    -webkit-tap-highlight-color: transparent; /* Désactive l'effet de surbrillance sur mobile */
+    touch-action: manipulation;
+}
+
+.mlq{
+    margin-left: 15px;
+}
+.mrq{
+    margin-right: 15px;
+}
+.mtq{
+    margin-top: 15px;
+}
+.mbq{
+    margin-bottom: 15px;
+}
+
+.mlt{
+    margin-left: 30px;
+}
+.mrt{
+    margin-right: 30px;
+}
+.mtt{
+    margin-top: 30px;
+}
+.mbt{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+/* _________________________ ANNIMATION FONDU ENTRER ______________________________ */
+
+
+
+
+
+
+section {
+    opacity: 0;
+    animation: slideUpFadeIn 0.4s ease-out forwards;
+}
+
+section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+section:nth-child(2) {
+    animation-delay: 0.15s;
+}
+section:nth-child(3) {
+    animation-delay: 0.2s;
+}
+section:nth-child(4) {
+    animation-delay: 0.25s;
+}
+section:nth-child(5) {
+    animation-delay: 0.3s;
+}
+section:nth-child(6) {
+    animation-delay: 0.35s;
+}
+section:nth-child(7) {
+    animation-delay: 0.4s;
+}
+section:nth-child(8) {
+    animation-delay: 0.45s;
+}
+section:nth-child(9) {
+    animation-delay: 0.5s;
+}
+section:nth-child(10) {
+    animation-delay: 0.55s;
+}
+section:nth-child(11) {
+    animation-delay: 0.6s;
+}
+
+ 
+ 
+
+
+/* _________________________ COLORS ______________________________ */ 
+
+
+
+
+
+
+/* Voici les couleurs qui vont etre utiliser par les variables de couleurs */
+
+:root {
+    --Blc: #f8f8f8;
+    --Grs: #1F1F1F;
+    --Grsc:#686868;
+    --Grscc:#eeeeee;
+    --Nr: #111011;
+    --Rs: #D56DE2;
+    --Vlt: #8764F5;
+    --Vrt: #58d566;
+    --Rg: #E06E6E;
+    --Org: #E0976E;  
+    --Gradiant: linear-gradient(110deg, var(--Rs), var(--Vlt));
+  }
+
+  
+  
+  /* Varable de couleurs */
+   
+  
+  
+  
+/* _______Theme par default_________ */
+
+
+  :root {
+    --Gradiant-opacity0: hsla(0, 0%, 100%, 0);
+    --Nr-Blc: var(--Nr);
+    --Blc-Nr: var(--Blc);
+    --Nr-Grs: var(--Nr);
+    --Grs-Nr: var(--Grs);
+    --Blc-Grs: var(--Blc);
+    --Grs-Blc: var(--Grs);
+    --Gradiant-opacity0: #ffffff00;
+    --Ombr: hwb(0 0% 100% / 0.05);
+  }
+
+
+/* _______Theme Noir_________ */
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+        --Nr-Blc: var(--Blc);
+        --Blc-Nr: var(--Nr);
+        --Nr-Grs: var(--Grs);
+        --Grs-Nr: var(--Nr);
+        --Blc-Grs: var(--Grs);
+        --Grs-Blc: var(--Blc);
+        --Gradiant-opacity0: #11101100;
+        --Ombr: hwb(0 100% 0% / 0.08);
+        --Grscc:#232323;
+    }
+  }
+
+
+
+
+
+
+
+  /* _______Text_________ */
+
+.Text-Nr-Blc{
+    color: var(--Nr-Blc);
+}
+.Text-Blc-Nr{
+    color: var(--Blc-Nr);
+}
+.Text-Nr-Grs{
+    color: var(--Nr-Grs);
+}
+.Text-Grs-Nr{
+    color: var(--Grs-Nr);
+}
+.Text-Blc-Grs{
+    color: var(--Blc-Grs);
+}
+.Text-Grs-Blc{
+    color: var(--Grs-Blc);
+}
+.Text-Rs{
+    color: var(--Rs);
+}
+.Text-Blc{
+    color: var(--Blc);
+}
+.Text-Grsc{
+    color: var(--Grsc);
+}
+.Text-Vrt{
+    color: var(--Vrt);
+}
+.Text-Rg{
+    color: var(--Rg);
+}
+
+
+  /* _______DIV_________ */
+
+  .Div-Nr-Blc{
+    background-color: var(--Nr-Blc);
+}
+.Div-Blc-Nr{
+    background-color: var(--Blc-Nr);
+}
+.Div-Nr-Grs{
+    background-color: var(--Nr-Grs);
+}
+.Div-Grs-Nr{
+    background-color: var(--Grs-Nr);
+}
+.Div-Blc-Grs{
+    background-color: var(--Blc-Grs);
+}
+.Div-Grs-Blc{
+    background-color: var(--Grs-Blc);
+}
+.Div-Rs{
+    background-color: var(--Rs);
+}
+.Div-Deg{
+    background: var(--Gradiant);
+}
+.Div-Vlt{
+    background-color: var(--Vlt);
+}
+.Div-Grscc{
+    background-color: var(--Grscc);
+}
+
+.Div-Rg{
+    background-color: var(--Rg);
+}
+.Div-Vrt{
+    background-color: var(--Vrt);
+}
+.Div-Blc{
+    background-color: var(--Blc);
+}
+
+
+
+  /* _______Fill_________ */
+
+
+
+.Fill-Nr-Blc{
+    fill: var(--Nr-Blc);
+}
+.Fill-Blc-Nr{
+    fill: var(--Blc-Nr);
+}
+.Fill-Nr-Grs{
+    fill: var(--Nr-Grs);
+}
+.Fill-Grs-Nr{
+    fill: var(--Grs-Nr);
+}
+.Fill-Blc-Grs{
+    fill: var(--Blc-Grs);
+}
+.Fill-Grs-Blc{
+    fill: var(--Grs-Blc);
+}
+.Fill-Vlt{
+    fill: var(--Vlt);
+}
+.Fill-Nr{
+    fill: var(--Nr);
+}
+.Fill-Vrt{
+    fill: var(--Vrt);
+}
+.Fill-Rg{
+    fill: var(--Rg);
+}
+.Fill-Blc{
+    fill: var(--Blc);
+}
+
+
+ /* _______Stroke_________ */
+
+
+
+.Str-Nr-Blc{
+    stroke: var(--Nr-Blc);
+}
+.Str-Blc-Nr{
+    stroke: var(--Blc-Nr);
+}
+.Str-Nr-Grs{
+    stroke: var(--Nr-Grs);
+}
+.Str-Grs-Nr{
+    stroke: var(--Grs-Nr);
+}
+.Str-Blc-Grs{
+    stroke: var(--Blc-Grs);
+}
+.Str-Grs-Blc{
+    stroke: var(--Grs-Blc);
+}
+.Str-Rs{
+    stroke: var(--Rs);
+}
+.Str-Blc{
+    stroke: var(--Blc);
+}
+
+
+
+/* _______Ombre_________ */
+
+
+
+.Ombr{
+    box-shadow: 0px 5px 20px 0.1rem var(--Ombr);
+}
+
+ 
+
+
+/* ___________Gradiant app_____________ */
+
+.gradiant-app{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--Gradiant-opacity0), var(--Blc-Nr));
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+/* _________________________ Texts ______________________________ */ 
+
+
+
+
+ /* _______Titres_________ */
+
+
+h1{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+}
+h2{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+
+
+ /* _______Paragraphes_________ */
+
+
+
+p, .gros-text, .moy-text, .petit-text{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.enorme-text{
+    font-weight: 900;
+    font-size: 30px;
+}
+.gros-text{
+    font-size: 16px;
+}
+
+.moy-text{
+    font-size: 14px;
+}
+
+.petit-text{
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* ____________________________________Page de chargement______________________________________ */
+
+
+
+
+#loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Noir); /* Couleur de fond, peut être ajustée */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* S'assurer que la page de chargement est au-dessus de tout */
+}
+
+.loading-spinner {
+    border: 16px solid var(--Gris); /* Light grey */
+    border-top: 16px solid var(--Violet); /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+/*___________________________________________Accueil___________________________________________*/
+
+
+
+
+
+/* ___________________________ HEADER ________________________________ */
+
+
+
+
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    border-radius: 11px;
+  }
+
+
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 0;
+    }
+
+
+.icon-container img, svg{
+  width: 40px;
+  margin: 0;
+}
+
+.icon-container svg{
+    margin-top: 5px;
+    width: 15px;
+    margin-right: 15px;
+    }
+ 
+
+
+/* __________________________ ZONNE INFO NAV ____________________________ */
+
+
+.INFOS_NAV {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+
+
+
+/* __________________________ SEPARATEUR ____________________________ */
+
+
+
+
+@keyframes popSlideRight {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: calc(100% - 60px); /* Taille finale */
+    }
+}
+
+.separateur-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.separateur{
+    width: calc(100% - 60px);
+    height: 1px;
+    animation: popSlideRight 0.7s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+/* __________________________ Principal App ____________________________ */
+
+/* _____________ Annimation _____________ */
+
+
+@keyframes slideUpFadeIn {
+0% {
+transform: translateY(20px);
+opacity: 0;
+    }
+100% {
+transform: translateY(0);
+opacity: 1;
+}
+}
+.principal-app-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.principal-app-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.principal-app-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.principal-app-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+
+
+
+/* _____________ Design _____________ */
+
+
+.principal-app{
+    display: flex;
+    padding-inline: 15px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+.principal-app-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: slideUpFadeIn 0.3s ease-out forwards;
+    opacity: 0; /* Start with opacity 0 */
+}
+
+.app-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+    border-radius: 11px;
+}
+
+
+
+/* HOMEPAGE RESERVATION */
+
+.homepage-mes-reservation{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-block: 30px;
+}
+
+
+
+
+/* RESERVATION ITEM */
+.reservation-item-container{
+    border: solid 1px var(--Rs);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 30px);
+    height: 50px;
+    margin-inline: 15px;
+    border-radius: 16px;
+    transition: transform 0.1s;
+}
+.reservation-item{
+    display: flex;
+    margin-left: 5px;
+    gap: 10px;
+    align-items: center;
+}
+
+.reservation-item-bouton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    box-sizing: border-box;
+    margin-right: 5px;
+    
+}
+.Bt-mes-reservation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 30px);
+    height: 60px;
+    margin-inline: 15px;
+    border-radius: 16px;
+}
+.reservation-profil-icon{
+    width: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OPTIONS */
+.options{
+    display:flex;
+    flex-direction: column; 
+    margin-top: 30px;  
+}
+.option-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-inline: 15px;
+    margin-bottom: 30px;
+}
+.option-item{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-radius: 16px;
+    padding-inline: 15px;
+}
+.icon-option-container{
+    margin-right: 15px;
+}
+
+
+/* BOUTON */
+
+
+
+
+.bouton-footer{
+    position: relative;
+    z-index: 1000;
+    box-sizing: border-box;
+    width: 100%;
+    height: 65px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+
+.bounton-footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 50px;
+    height: 65px;
+    width: calc(100% - 15px);
+    
+}
+
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+/* ________________________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _______________MES RESERVATIONS________________________*/
+/* _______________MES RESERVATIONS________________________*/
+/* _______________MES RESERVATIONS________________________*/
+/* _______________MES RESERVATIONS________________________*/
+/* _______________MES RESERVATIONS________________________*/
+/* _______________MES RESERVATIONS________________________*/
+
+
+
+
+
+
+
+
+
+
+/* SHERCH ZONNE*/
+    
+
+
+.calendar-container {
+    background-color: var(--Grscc);
+    border-radius: 16px;
+    padding: 15px;
+    width: calc(100% - 60px);
+    max-width: 500px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Nr-Blc);
+    margin: 0; /* Supprimer toute marge par défaut */
+    padding-bottom: 15px; /* Ajouter un padding pour l'espace nécessaire */
+    border-bottom: 1px solid var(--Grsc); /* Pour une séparation visuelle */
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Vlt);
+    color: #fff;
+    border: none;
+    width: 50px;
+    padding: 10px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.nav-button svg{
+    width: 10px;
+    height: 10px; 
+    margin: 5px;  
+}
+
+
+.current-date {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.calendar-body {
+    display: none;
+    padding-top: 15px; /* Assurer un espace de 15px en haut */
+}
+
+.calendar-days {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    color: var(--Nr-Blc);
+    border-bottom: 1px solid var(--Grsc);
+}
+
+.day-name {
+    width: calc(100% / 7); /* Chaque jour prend une largeur égale */
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-dates {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.calendar-dates div {
+    width: calc(100% / 7); /* Assurez-vous que chaque jour a la même largeur */
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Inclure padding et bordure dans la largeur totale */
+    border-radius: 11px;
+    cursor: pointer;
+    color: var(--Nr-Blc);
+}
+
+.calendar-dates div:hover {
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+.calendar-dates div.selected {
+    background-color: var(--Rs);
+    color: var(--Blc);
+}
+
+.calendar-footer {
+    display: none; /* Cache le bouton OK par défaut */
+    justify-content: center;
+    width: 100%;
+    padding-top: 15px; /* Assurer un espace de 15px en haut */
+}
+
+.confirm-button {
+    color: var(--Blc);
+    background: var(--Vlt);
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+    
+    
+    
+    /* Annule le style d'auto-complétion sur iPhone et autres appareils WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px var(--Grscc) inset !important;
+    box-shadow: 0 0 0px 1000px var(--Grscc) inset !important;
+    -webkit-text-fill-color: var(--Nr-Blc) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Conteneur principal des formulaires */
+.form-zonne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Icône de formulaire */
+.form-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    height: 15px;
+    width: 15px;   
+}
+
+/* Style du conteneur de chaque champ de formulaire */
+.form {
+    border-radius: 16px;
+    display: flex;
+    gap: 10px;
+    width: calc(100% - 30px);
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Grscc);
+}
+
+/* Style des champs de saisie */
+.form input {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    border-radius: 16px;
+    background-color: var(--Grscc);
+}
+.form-note {
+    border-radius: 16px;
+    display: flex;
+    gap: 10px;
+    width: calc(100% - 30px);
+    height: 120px;
+    justify-content: space-between;
+    align-items: top;
+    background-color: var(--Grscc);
+}
+
+/* Style des champs de saisie */
+.form-note textarea {
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    border: none;
+    margin: 0px;
+    padding-top: 18px;
+    border-radius: 0px 16px 16px 0px;
+    background-color: var(--Grscc);
+}
+.form-split{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-split svg{
+    width: 30px;
+    height: 18px;
+
+}
+.form-icon-note {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 15px;
+    width: 15px;   
+}
+
+
+/* Désactive le focus style par défaut */
+input:focus {
+    outline: none;
+}
+textarea:focus {
+    outline: none;
+}
+
+    
+    
+/* Conteneur parent pour le bouton et le menu déroulant */
+.position-relative {
+    position: relative;
+}
+
+/* Dropdown styling */
+.country-dropdown {
+    display: none;
+    position: absolute;
+    background-color: var(--Grscc);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 99999; /* Augmentez encore plus le z-index pour assurer le rendu au-dessus */
+    top: 100%; /* Positionner le menu juste en dessous du bouton */
+    left: 0;
+    width: 100%; /* Pour s'assurer que le menu occupe toute la largeur du parent */
+}
+
+/* Options du dropdown */
+.country-option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.country-option:hover {
+    background-color: var(--Rs);
+    color: var(--Blc);
+}
+
+/* Bouton de sélection du pays */
+#country-select-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 100000; /* Assurez-vous que le bouton reste au-dessus */
+}
+
+
+   
+    
+
+       
+
+
+
+   /* AFFICHAGE DE DATE*/
+
+
+.Date-affichage{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-inline: 30px;
+    border-radius: 11px;
+}
+
+
+
+
+
+
+
+
+/* _________________________PROFIL TYPE INSTA___________________________  */
+
+
+
+
+
+
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    border-radius: 11px;
+  }
+  .Back-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    }
+
+.icon-container-Header-Back{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 50px;
+    margin-left: 15px;
+    margin-top: 0;
+    }
+
+.icon-container-Header-Back svg{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .profil-tp-inst-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(100% - 30px);
+            margin-inline: 15px;
+            
+        }
+        .profil-img{
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+    
+        }
+        .profil-img svg{
+            position: absolute;
+            transform: translateY(23px) translateX(23px);
+            
+
+        }
+
+        .profil-split{
+            display: flex;   
+        }
+        
+    .profil-infos-tp-insta{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .statut-client-text{
+        color: #D96DE0;
+    }
+    .profil-infos-subtext{
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+
+    .profil-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90px;
+        margin-bottom: 15px;
+    }
+    .nb-reservation-text, .profil-infos-subtext, .id-reservation-text, .statut-client-text {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .nb-reservation-text, .id-reservation-text, .statut-client-text {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;  
+    }
+
+    
+
+
+
+
+
+    .DDR-Action-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 15px;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .placer-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+
+    .Btn-placer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px var(--Nr-Blc);
+        border-radius: 11px;
+        width: 100px;
+        height: 30px;
+        margin-left: 5px;
+    }
+
+    .Client-arrivee svg{
+        width: 15px;
+        height: 30px;
+        margin-right: 15px;
+        
+    }
+    .Client-partie svg{
+        width: 15px;
+        height: 30px;
+        margin-right: 15px;
+        
+    }
+    .DDR-Action-client-container{
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .Client-arrivee{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        width: 100%;
+        height: 60px;
+    }
+
+    
+    .Client-partie{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        width: 100%;
+        height: 60px;
+    }
+
+
+
+    .detail-de-la-rsv{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+    }
+
+    .detail-de-la-rsv h2{
+        margin-left: 15px;
+    }
+    .space-bas-qu{
+        margin-bottom: 15px;
+    }
+    .space-bas-tr{
+        margin-bottom: 30px;
+    }
+    .detail-Drr{
+        display: flex;
+        margin-left: 30px;
+        gap: 5px;
+    }
+    textarea{
+        width: calc(100% - 60px);
+        height: 70px;
+        border-radius: 16px;
+        border: solid 2px var(--Nr-Blc);
+        color: var(--Nr-Blc);
+        background-color: var(--Blc-Grs);
+        padding: 15px;
+    }
+
+    .text-area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Animation pour le glissement */
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .page-slide-in {
+    animation: slideIn 0.5s forwards;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _______________Nouvelle reservations________________________*/
+/* _______________Nouvelle reservations________________________*/
+/* _______________Nouvelle reservations________________________*/
+/* _______________Nouvelle reservations________________________*/
+/* _______________Nouvelle reservations________________________*/
+/* _______________Nouvelle reservations________________________*/
+
+
+
+
+.btn-h, .btn-h-footer {
+    user-select: none; /* Empêche la sélection du texte */
+    -webkit-user-select: none; /* Pour Safari */
+    -moz-user-select: none; /* Pour Firefox */
+    -ms-user-select: none; /* Pour Internet Explorer et Edge */
+}
+
+
+.nv-rs-slcteur-heures {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.nv-rs-h-zonne {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 30px);
+    gap: 15px;
+}
+
+.nv-rs-h {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
+    grid-template-rows: repeat(3, auto);   /* 3 lignes de hauteur automatique */
+    gap: 10px; /* Espace entre les éléments de la grille */
+    width: 100%; 
+    text-align: center;/* Pour s'assurer que la grille occupe toute la largeur disponible */
+}
+
+.btn-h {
+    border-radius: 16px;
+    padding: 15px 15px;
+    background-color: var(--Grscc);
+    color: var(--Nr-Blc);
+    cursor: pointer; 
+}
+
+.btn-h-footer {
+    grid-column: span 2; /* Étendre ce bouton sur 2 colonnes */
+    border-radius: 16px;
+    padding: 15px 15px;
+    background-color: var(--Grscc);
+    color: var(--Nr-Blc);
+    cursor: pointer; 
+}
+
+@keyframes growHeight {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 170px; /* Taille finale */
+    }
+}
+
+.sep-verticical {
+    height: 130px; /* Taille actuelle */
+    width: 1px;
+    background-color: var(--Rs);
+    animation: growHeight 0.8s ease-out forwards; /* Animation de la hauteur */
+}
+
+.btn-h-all-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 15px;
+    background-color: var(--Grscc); /* Même couleur que les btn-h */
+    color: var(--Nr-Blc); /* Même couleur de texte que les btn-h */
+    cursor: pointer; /* Curseur pointeur pour indiquer l'interactivité */
+    text-align: center; /* Centrer le texte à l'intérieur du bouton */
+    width: calc(100% - 30px); /* Largeur complète avec respect des marges */
+    margin: 10px auto 0; /* Espace de 15px au-dessus */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+
+.btn-h.selected, .btn-h-footer.selected, .btn-h-all-day.selected {
+    background-color: var(--Rs); /* Couleur de fond quand sélectionné */
+    color: var(--Blc);          /* Couleur du texte quand sélectionné */
+}
+
+
+
+
+
+
+
+
+
+
+/* Container principal pour la section nombre de personnes */
+.nv-nb-pers-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne lorsqu'il n'y a plus de place */
+    margin-inline: 15px; /* 15px de marge sur les côtés */
+    gap: 5px; /* Espace minimum de 5px entre chaque bouton */
+    justify-content: flex-start; /* Aligne les boutons à gauche */
+}
+
+/* Styles des boutons dans la section nombre de personnes */
+.nv-nb-pers-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 10px 15px; /* 15px de padding comme spécifié */
+    background-color: var(--Grscc); /* Même couleur que les btn-h */
+    color: var(--Nr-Blc); /* Même couleur de texte que les btn-h */
+    cursor: pointer; /* Curseur pointeur pour indiquer l'interactivité */
+    text-align: center; /* Centrer le texte à l'intérieur des boutons */
+    width: 50px; /* Largeur fixe des boutons */
+    height: 50px; /* Hauteur fixe des boutons */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    min-width: max-content; /* Assure que les boutons ne deviennent pas plus petits que leur contenu */
+}
+
+/* Ajoute le comportement de sélection comme pour les btn-h */
+.nv-nb-pers-btn.selected {
+    background-color: var(--Rs); /* Couleur de fond quand sélectionné */
+    color: var(--Blc); /* Couleur du texte quand sélectionné */
+}
+
+/* Désactive la sélection du texte dans les boutons */
+.nv-nb-pers-btn {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

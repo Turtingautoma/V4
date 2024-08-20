@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css"  />
+    <title>Accueil</title>
+  </head>
+
+  <body>
+
+
+
+    <div class="gradiant-app"></div>
+    <!-- _________________________________________________________________________________________ -->
+    <!-- Header Back -->
+
+
+
+
+
+
+
+
+    <header>
+      <a href="index.html">
+      <div class="Back-container">
+      <div class="icon-container-Header-Back">
+        <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.4474 2.99984L3.0001 11.5522L11.5525 19.9995" class="Str-Nr-Blc" stroke-width="4.25002" stroke-linecap="round"/>
+        </svg> 
+      </div>
+      <p class="petit-text Text-Grsc">Retour</p>
+      </div>
+      </a>
+    </header>
+
+
+
+
+     <!-- _________________________________________________________________________________________ -->
+    <!-- Header DETAIL DE LA RESERVATION -->
+
+
+
+
+
+    <section>
+      <div class="INFOS_NAV">
+        <h1 class="Text-Nr-Blc">Mes réservations</h1>
+      </div>
+    </section>
+
+
+
+
+
+
+
+<!-- _________________________________________________________________________________________ -->
+    <!-- Separateur -->
+
+
+
+
+
+    <section>
+      <div class="separateur-container">
+      <div class="separateur Div-Rs"></div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+<!-- _________________________________________________________________________________________ -->
+    <!-- sherch-zonne -->
+<section>
+      <div class="form-zonne">
+        <div class="calendar-container">
+            <div class="calendar-header" id="calendarHeader">
+                <button id="prevDay" class="nav-button">
+                    <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.65686 2.00001L3.00001 7.65687L8.65686 13.3137" class="Str-Blc-Nr" stroke-width="3.95373" stroke-linecap="round"/>
+                        </svg>
+                </button>
+                <div class="current-date">
+                    <span id="dayName"></span>, <span id="monthName"></span> <span id="day"></span>, <span id="year"></span>
+                </div>
+                <button id="nextDay" class="nav-button">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.65686 13.3137L8.31371 7.65685L2.65686 2" class="Str-Blc-Nr" stroke-width="3.95373" stroke-linecap="round"/>
+                        </svg>
+                </button>
+            </div>
+            <div class="calendar-body" id="calendarBody">
+                <div class="calendar-days">
+                    <!-- Les noms des jours -->
+                    <div class="day-name">Dim</div>
+                    <div class="day-name">Lun</div>
+                    <div class="day-name">Mar</div>
+                    <div class="day-name">Mer</div>
+                    <div class="day-name">Jeu</div>
+                    <div class="day-name">Ven</div>
+                    <div class="day-name">Sam</div>
+                </div>
+                <div class="calendar-dates" id="calendarDates"></div>
+            </div>
+            <div class="calendar-footer" id="calendarFooter">
+                <button id="confirmButton" class="confirm-button">OK</button>
+            </div>
+        </div>
+        
+        <div class="form">
+            <div class="form-icon"> 
+                <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.01962 8.64743C6.51192 9.8025 4.28182 9.52364 3.05211 7.9185C1.82239 6.31337 2.13363 4.08755 3.64132 2.93249C5.14902 1.77742 7.37912 2.05628 8.60883 3.66142C9.83855 5.26656 9.52731 7.49237 8.01962 8.64743ZM8.8907 11.4291C8.59795 11.047 8.07669 10.9378 7.61894 11.0867C5.44813 11.7931 2.95457 11.0798 1.46447 9.13481C-0.416314 6.67984 0.0137374 3.19216 2.42501 1.34485C4.83629 -0.502459 8.31569 -0.00985646 10.1965 2.44511C11.6867 4.39023 11.7262 6.98366 10.4789 8.89582C10.2159 9.29904 10.1857 9.83079 10.4784 10.2129L11.7324 11.8497C12.0682 12.2881 11.9851 12.9158 11.5467 13.2517C11.1083 13.5875 10.4806 13.5044 10.1447 13.066L8.8907 11.4291Z" class="Fill-Nr-Blc"/>
+                  </svg>
+            </div>
+            <input type="text" placeholder="Rechercher un nom..." class="gros-text Text-Nr-Blc"> 
+          </div>
+    </div>
+    <script src="/js/calendar.js"></script>
+</section>
+    
+
+
+<section class="homepage-mes-reservation">
+
+
+
+    <a href="/componant/Detail-de-reservation/page.html">
+        <div class="reservation-item-container Div-Grscc">        
+            <div class="reservation-item Text-Nr-Blc"> 
+                <div class="reservation-profil-icon">
+                    <svg  width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7 8C9.20914 8 11 6.20914 11 4C11 1.79086 9.20914 0 7 0C4.79086 0 3 1.79086 3 4C3 6.20914 4.79086 8 7 8ZM7 9C3.13401 9 0 12.134 0 16C0 18.2091 1.79086 20 4 20H10C12.2091 20 14 18.2091 14 16C14 12.134 10.866 9 7 9Z"
+                            class="Fill-Nr-Blc" />
+                    </svg>
+                </div>
+                <p class="gros-text">Nico</p>
+                <p class="gros-text">4 personnes</p>
+                <p class="gros-text">17/09/2024</p>
+            </div>
+            <div class="reservation-item-bouton Div-Vlt">
+                <div class="rib-arrow">
+                    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 8.99997L4.99998 4.99998L1 1" class="Str-Blc" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>   
+        </div>
+        </a>
+  </section>
+    
+    
+<a href="NvReservation.html">
+<section class="bouton-footer">
+    <div class="bounton-footer-container Div-Nr-Blc Text-Blc-Nr">
+        <h2>Nouvelle réservation</h2>
+    </div>
+</section>
+</a>
+
+
+
+  </body>
+</html>
+    
